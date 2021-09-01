@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 50%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #adbddf;
+  overflow-x: hidden;
+  transition: 0.9s;
+  padding-top: 0px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.9s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 16px;
+  margin-left: 50px;
+  color: blue;
+  }
+.closebtn a:hover {
+ color: red; 
+ }
+
+#main {
+  transition: margin-left .9s;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.logo {
+    position: static;
+    display: block;
+    left: 0;
+}
+
+.logo_dummy {
+  display: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; Close</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="logo">
+    my logo
+</div>
+<div id="main">
+
+  <div>
+    <div class="logo_dummy">
+        my logo
+    </div>
+    </div>
+    <span style="font-size:18px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+  document.getElementById("main").style.marginLeft = "150px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 
